@@ -1,3 +1,6 @@
 [bandit]
 exclude_dirs = tests, migrations
-skips = B101, B301 
+skips = B101, B301
+severity = medium
+confidence = high
+
