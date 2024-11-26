@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main  
-
 jobs:
   security-check:
     runs-on: ubuntu-latest
@@ -16,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9' 
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
@@ -24,4 +23,4 @@ jobs:
           pip install bandit
 
       - name: Run Bandit
-        run: bandit -r . -
+        run: bandit -r . -c .bandit
